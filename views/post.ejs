@@ -1,0 +1,11 @@
+<% include ./layouts/header %>
+<div class='ui container' style= "margin-top: 4em">
+    <h2> <%= post.title %> </h2>
+    <img class='ui image' src="<%= post.image %>" />
+    <p><%= post.body %></p>
+    <form method="POST" action="/blogs/<%= post._id %>?_method=DELETE">
+    <button class="ui red basic button">Delete</button>
+    </form>
+</div>
+
+<% include ./layouts/footer %>

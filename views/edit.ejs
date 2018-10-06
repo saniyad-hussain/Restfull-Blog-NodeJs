@@ -1,0 +1,20 @@
+<% include ./layouts/header %>
+<div class='ui main text container segment' style='margin-top: 3em'>
+    <div class='ui huge header '>Edit <%= post.title %></div>
+    <form class='ui form' action = '/blogs/<%= post._id %>?_method=PUT' method='POST' >
+        <div class='field'>
+            <label>Blog Name</label>
+            <input type = 'text' name = 'title' value='<%= post.title %>'>
+        </div>
+        <div class='field'>
+            <label>Image</label>
+            <input type = 'text' name = 'imgSrc' value='<%= post.image %>'>
+        </div>
+        <div class='field'>
+            <label>Blog Content</label>
+            <textarea name='bodies'><%= post.body %></textarea>
+        </div>
+        <button class='violet ui basic button'>Submit</button>
+    </form>
+</div>
+<% include ./layouts/footer %>

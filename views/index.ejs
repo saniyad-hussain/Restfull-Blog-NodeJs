@@ -1,0 +1,12 @@
+<% include ./layouts/header %>
+
+<% blogs.forEach((blog)=>{%>
+    <div class='ui container' style= "margin-top: 4em">
+        <h2> <%= blog.title %> </h2>
+        <img class='ui image' src="<%= blog.image %>" />
+        <p><%= blog.body %></p>
+        <a href='/blogs/<%= blog._id %>'>Read more</a>
+    </div>
+<% }) %>
+
+<% include ./layouts/footer %>
